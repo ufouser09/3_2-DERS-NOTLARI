@@ -1,0 +1,95 @@
+adam için hangileri dogrudur?
+A-adagraddan türemiştir.
+B-fazla değişim gösteren boyutlardaki güncellemeleri baskılar
+C-adım buyuklugunu kendi belirler.
+D-her boyuttaki güncelleme diğerlerinin hesabını etkiler.
+E-geçmiş güncellemeler şimdiki güncellemeyi etkilemez.
+F-1. ve 2.'nin momentleri için fazladan hafıza gerekmez
+bana bu soruyu türkçe anlat
+
+adagrad için hangileri doğrudur?
+A-hessian'ı taklit eder.
+B-hessian'ı kullanır
+C-2.derece türevi kullanır
+D-olasılıksal olarak kullanılmalıdır.
+E-Hessian'ı taklit etmek full yaklaşım diyagonele göre daha az hesaplama gerektirir.
+bana bu soruyu türkçe açıkla
+
+
+SGO için hangileri doğru?
+A-her güncellemede rastgele seçilen bazı örnekler kullanılır.
+B-her güncellemede en çok işe yarayan örnekler kullanılır.
+C-Adım büyüklüğünü zaman içinde azaltmak yakınsamasını sağlar
+D-sabit adım büyüklüğü ile yakınsar
+bana bunu türkçe açıkla
+
+***********************************************************************
+gradient descent için hangisi/hangileri doğrudur?
+A-her bir guncellemede tüm örnekleri kullanır.
+B-her bir guncellemede bazı örnekleri kullanır
+C-adım buyuklugunu kendi belirler
+D-guncelleme vektorunun varyansı dusuktur.(SGD'e gore dusuktur.)
+bana bunu türkçe açıkla
+
+x^2 fonksiyonun min noktasını steepest descent ile bulunca baslangıc noktası sonucu etkiler mi?
+A-evet etkiler,adım buyuklugune baglı.
+B-evet etkiler,f'in 2.turevinin işaretine baglı
+C-etkilemez,nerden baslarsan basla aynı yere gider.
+D-etkilemez yanlıs yere goturur.
+bana bunu türkçe açıkla
+
+
+
+hessian matrisinin simetrik olma sebebi nedir?
+A-turev alma sırası sonucu etkiler
+B-turev alma sırası sonucu etkilemez.
+C-hessian matrisi karedir.
+D-hesaplama maliyeti yüksektir.
+bana bunu türkçe açıkla
+
+
+statik adım buyuklugunun avantajı nedir?
+A-çözümün yanında zikzak yapıyor olması
+B-çözümün cok fazla hesaplama yapması
+C-az hesaplama yapması
+D-her zaman converge etmesi
+bana bunu türkçe açıkla
+
+her bir guncelleme vektoru bir oncekine dik ise hangi yontem?
+cevap:steepest descent
+bana bunu türkçe açıkla
+
+
+matematiksel modeliniz en basta kabul ettiginiz hipotezinize uyuşmuyorsa
+asagıdakilerden hangisi yapmamız gereken bir şeydir?
+A-daha fazla data toplamak.
+B-hipotezimizi desteklemeyen dataları silmek
+C-matematiksel modeli degistirmek
+D-matematiksel modele yeni bagımsız degiskenler eklemek
+bana bunu türkçe açıkla
+
+
+populasyon modeliyle sample modeli arasındaki farka dair hangisi dogrudur?
+A-sample size population sizedan cok kucukse modeller arasında buyuk fark vardır.
+B-bunların ikisi birbirinden farklı seyler degildir.
+C-populasyon size'ı sample size'dan kucuktur.
+D-Independent degisken sayısı 2 ise sample model her zaman populasyon modelden daha komplekstir.
+bana bunu türkçe açıkla
+
+X:input y:output Y:X*W W=X^-1*Y ise hangisi soylenebilir?
+A-2 tane bagımsız 1 tane bagımlı degisken vardır.
+B-x'ın satir ve sutun sayisi aynıdır.
+C-independent degisken sayisi sample size'dan daha buyuktur.
+D-sample size independent degisken sayısından fazladır.
+bana bunu türkçe açıkla
+
+X'in farklı degerleri için hataları gosteren bir grafikle ilgili pattern varsa veya yoksa 
+ne anlama gelir?
+
+Cevap:bir pattern gözüküyorsa modelimizin derecesi yeterli olmamıstır.
+yanı modelde eksik vardır.
+bana bunu türkçe açıkla
+
+
+
+ 

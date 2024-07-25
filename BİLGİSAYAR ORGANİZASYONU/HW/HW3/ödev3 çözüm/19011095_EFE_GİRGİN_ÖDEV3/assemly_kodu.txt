@@ -1,0 +1,126 @@
+addi x10, x0, 0     # Set x10 to 0x00 (memory address)
+
+    # Perform memory assignments using sw and addi
+    addi x1, x0, 3
+    sw x1, 0(x10)       # Store 3 at address 0x00 (ARR[0])
+
+    addi x1, x0, 7
+    sw x1, 4(x10)       # Store 7 at address 0x04 (ARR[1])
+
+    addi x1, x0, 2
+    sw x1, 8(x10)       # Store 2 at address 0x08 (ARR[2])
+
+    addi x1, x0, 6
+    sw x1, 12(x10)      # Store 6 at address 0x0c (ARR[3])
+
+    addi x1, x0, 5
+    sw x1, 16(x10)      # Store 5 at address 0x10 (ARR[4])
+
+    addi x1, x0, 4
+    sw x1, 20(x10)      # Store 4 at address 0x14 (ARR[5])
+
+    addi x1, x0, 1
+    sw x1, 24(x10)      # Store 1 at address 0x18 (ARR[6])
+
+    addi x1, x0, 1000
+    sw x1, 28(x10)      # Store 1000 at address 0x1c (ARR[7])
+
+    addi x1, x0, 999
+    sw x1, 32(x10)      # Store 999 at address 0x20 (ARR[8])
+
+    addi x1, x0, 25
+    sw x1, 36(x10)      # Store 25 at address 0x24 (ARR[9])
+
+    addi x1, x0, 90
+    sw x1, 40(x10)      # Store 90 at address 0x28 (ARR[10])
+
+    addi x1, x0, 100
+    sw x1, 44(x10)      # Store 100 at address 0x2c (ARR[11])
+
+    addi x1, x0, 30
+    sw x1, 48(x10)      # Store 30 at address 0x30 (ARR[12])
+
+    addi x1, x0, 20
+    sw x1, 52(x10)      # Store 20 at address 0x34 (ARR[13])
+
+    addi x1, x0, 10
+    sw x1, 56(x10)      # Store 10 at address 0x38 (ARR[14])
+
+    addi x1, x0, 200
+    sw x1, 60(x10)      # Store 200 at address 0x3c (ARR[15])
+
+    addi x1, x0, 1650
+    add x1,x1,x1
+    sw x1, 64(x10)      # Store 3300 at address 0x40 (ARR[16])
+
+    addi x1, x0, 250
+    sw x1, 68(x10)      # Store 250 at address 0x44 (ARR[17])
+
+    addi x1, x0, 12
+    sw x1, 72(x10)      # Store 12 at address 0x48 (ARR[18])
+    
+    addi x1, x0, 75
+    sw x1, 76(x10)      # Store 75 at address 0x4c (ARR[19])
+ 
+  addi x10, x0, 80    # Set x10 to 80 (base address offset)
+
+    # Perform memory assignments using sw and addi
+    addi x1, x0, 17
+    sw x1, 0(x10)       # Store 17 at address 80 (COUNT[0])
+
+    addi x1, x0, 13
+    sw x1, 4(x10)       # Store 13 at address 84 (COUNT[1])
+
+    addi x1, x0, 18
+    sw x1, 8(x10)       # Store 18 at address 88 (COUNT[2])
+
+    addi x1, x0, 14
+    sw x1, 12(x10)      # Store 14 at address 92 (COUNT[3])
+
+    addi x1, x0, 15
+    sw x1, 16(x10)      # Store 15 at address 96 (COUNT[4])
+
+    addi x1, x0, 16
+    sw x1, 20(x10)      # Store 16 at address 100 (COUNT[5])
+
+    addi x1, x0, 19
+    sw x1, 24(x10)      # Store 19 at address 104 (COUNT[6])
+
+    addi x1, x0, 1
+    sw x1, 28(x10)      # Store 1 at address 108 (COUNT[7])
+
+    addi x1, x0, 2
+    sw x1, 32(x10)      # Store 2 at address 112 (COUNT[8])
+
+    addi x1, x0, 9
+    sw x1, 36(x10)      # Store 9 at address 116 (COUNT[9])
+
+    addi x1, x0, 6
+    sw x1, 40(x10)      # Store 6 at address 120 (COUNT[10])
+
+    addi x1, x0, 5
+    sw x1, 44(x10)      # Store 5 at address 124 (COUNT[11])
+
+    addi x1, x0, 8
+    sw x1, 48(x10)      # Store 8 at address 128 (COUNT[12])
+
+    addi x1, x0, 10
+    sw x1, 52(x10)      # Store 10 at address 132 (COUNT[13])
+
+    addi x1, x0, 12
+    sw x1, 56(x10)      # Store 12 at address 136 (COUNT[14])
+
+    addi x1, x0, 4
+    sw x1, 60(x10)      # Store 4 at address 140 (COUNT[15])
+
+    addi x1, x0, 0
+    sw x1, 64(x10)      # Store 0 at address 144 (COUNT[16])
+
+    addi x1, x0, 3
+    sw x1, 68(x10)      # Store 3 at address 148 (COUNT[17])
+
+    addi x1, x0, 11
+    sw x1, 72(x10)      # Store 11 at address 152 (COUNT[18])
+
+    addi x1, x0, 7
+    sw x1, 76(x10)      # Store 7 at address 156 (COUNT[19])

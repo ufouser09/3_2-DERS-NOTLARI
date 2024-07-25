@@ -1,0 +1,41 @@
+# Register Tanımlamaları
+# x5 -> ARR dizisinin adresi
+# x6 -> COUNT dizisinin adresi
+# x7 -> RESULT dizisinin adresi
+# x20 -> Dizi uzunluğu (20 eleman)
+# x10 -> Sayaç için kullanılan index
+# x1, x2, x3, x4 -> Geçici kullanım için kaydediciler
+
+# Sabit değerleri kaydedicilere yükle
+li x5, 0x1000     # ARR başlangıç adresi
+li x6, 0x1100     # COUNT başlangıç adresi
+li x7, 0x1200     # RESULT başlangıç adresi
+li x20, 20        # Dizi uzunluğu (20 eleman)
+li x10, 0         # Sayaç (index) için başlangıç değeri
+
+loop:
+    # Döngü sınır kontrolü
+    bge x10, x20, end    # x10 >= x20 ise döngüyü bitir
+
+    # ARR ve COUNT dizilerinden değerleri yükle
+    lw x1, 0(x5)          # x1 = ARR[x10]
+    lw x2, 0(x6)          # x2 = COUNT[x10]
+
+    # RESULT dizisine erişim için adres hesaplama
+    slli x3, x2, 2        # x3 = x2 * 4 (byte cinsinden offset)
+    add x4, x7, x3        # x4 = RESULT başlangıç adresi + offset
+
+    # RESULT dizisine değeri yaz
+    sw x1, 0(x4)          # RESULT[COUNT[x10]] = ARR[x10]
+
+    # Kaydedici adreslerini ve sayacı güncelle
+    addi x5, x5, 4        # Bir sonraki ARR elemanına geç
+    addi x6, x6, 4        # Bir sonraki COUNT elemanına geç
+    addi x10, x10, 1      # Indexi artır
+
+    # Döngüyü sürdür
+    j loop
+
+end:
+    # Program sonu, burada herhangi bir temizlik işlemi yapılabilir
+    nop

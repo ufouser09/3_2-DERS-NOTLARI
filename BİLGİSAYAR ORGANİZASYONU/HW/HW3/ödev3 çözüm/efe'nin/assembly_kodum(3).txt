@@ -1,0 +1,20 @@
+andi x5, x0, 0     # Zero out x5 (index register)
+addi x6, x0, 1     # Set x6 to 1 (loop condition check)
+addi x2, x0, 0     # Zero out x2 (ARR base address, adjusted in loop)
+addi x7, x0, 32    # Base address offset for COUNT (4 * 8, assuming COUNT starts after ARR)
+addi x8, x0, 64    # Base address offset for RESULT (4 * 16, assuming RESULT starts after ARR and COUNT)
+
+LOOP:
+    lw x3, 0(x7)       # Load COUNT[i] into x3
+    add x3, x3, x3     # Multiply COUNT[i] by 2
+    add x3, x3, x3     # Multiply COUNT[i] by 4 (2*2)
+    add x3, x3, x8     # Calculate address RESULT[COUNT[i]]
+    lw x4, 0(x2)       # Load ARR[i] into x4
+    sw x4, 0(x3)       # Store ARR[i] into RESULT[COUNT[i]]
+
+    addi x2, x2, 4     # Move to next element in ARR (stride 4 bytes)
+    addi x7, x7, 4     # Move to next element in COUNT (stride 4 bytes)
+    addi x5, x5, 1     # Increment index
+
+    slti x1, x5, 20    # Check if index < 20
+    beq x1, x6, LOOP   # If true, continue loop

@@ -1,0 +1,74 @@
+GİRDİ OLARAL ALINCAKLAR:
+A*y' + B*y = g(t)
+A,B katsayılarını ve g(t) fonksiyonunu almalısın
+initial value yani x0 ve y0 almalısın
+adım büyüklüğü yani h almalısın
+ve hesaplamak istediğin x noktasını almalısın
+
+odev metni n.mertebe yerine n terimli diferansiyel denklem olarak degistiriniz
+diferansiyel denklem 1.mertebeden olabilir yuksek mertebeden olmasına gerek yok
+
+ay' + by + c=0
+formatında yapılması yeterli
+
+g(t)'nin kac terimli oldugunu alıyorsun
+g(t)'nin terim sayisi alincak
+
+5y' + 3y=sinx diyelim katsayılar,bağımsız değişken,initial values ve adım sayısını kullanıcı gitiyor
+ve program hesaplıyor.
+
+5y' + 3y=sinx
+bunu kullanıcı giriyor.
+
+runge kutte tekniginde kullanıcı ulasmaya calıstıgın sayısal degeri giriyo
+ve adım buyuklugunu
+
+
+y(0)=2 yi alıyosun kullanıcıdan 
+x=0 ve y=2 initial value
+
+x=0.6'ya kadar x'i arttırıyon h kadar
+mesela h'i da kendin atıyon
+0.6'yı da kullanıcı veriyor
+
+
+5y' + 3y = sinx   N=1 
+
+5y' + 3y = sinx + x^2     N=2
+
+Ay' + By=g(t) 
+a ve b sabit sayi
+
+
+https://atozmath.com/example/CONM/RungeKutta.aspx?he=h&q=rk4------>burda runge kutte tekniği var
+
+kullanıcıdan polinom alıyoruz
+sin cos log exp denklem bunlari da çözücek
+
+runge-kutte teoreminde target value ve stepsizeadam giriyosun
+
+ay'+by+c burda c'ye x,sinx,cosx gibi ifadeler ekleyebiliriz.
+
+g(t)=Ax^2+Bx^1+c bunu hesaplıcaz
+
+nümerik çözüm ile gerçek çözüm arasındaki mutkak hata degerini ekranda göstericez
+
+buders runge kutte
+1/6 formulunu kullanıcaz
+
+https://atozmath.com/example/CONM/RungeKutta.aspx?q=rk4&m=1&q1=E1
+
+ay'+by+g(x)=0 
+g(x) herhangi bir şey olabilir.
+
+1.mertebeden sabit katsayılı adi diferansiyel denleminin runge-kutta-4 yöntemiyle 
+sayısal çözümünü C dilinde kodlayınız.
+Ayrıca, sayısal çözüm için denklem çözümü sonrasında elde edilecek sayısal değer için bağımsız değişken 
+değeri (t veya x) kullanıcıdan alınmalıdır.
+Denklemi modellerken mutlaka struct kullanınız
+Runge Kutta -4 ile elde edilen çözümünün t vey x bağımsız değişkenine göre yaklaşık çözümü ekranda gösterilmelidir. 
+Ayrıca iterasyonlarda elde edilen yaklaşım sonuçları aşamalı olarak ekrana yazdırılmalıdır.
+step size olan h'ı ve initial value'yu ve target value'yu kullanıcıdan alıyorsun
+
+
+atozmath

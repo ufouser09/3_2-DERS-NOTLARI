@@ -1,0 +1,70 @@
+module tb;
+
+    // Dizileri tanımla
+    reg [31:0] ARR [0:19];
+    reg [31:0] COUNT [0:19];
+    reg [31:0] RESULT [0:19];
+    reg [31:0] expected_RESULT [0:19];
+    
+    // DUT (Design Under Test) için iç sinyaller
+    reg clk;
+    reg rst_n;
+    integer i;
+
+    initial begin
+        // ARR dizisini başlat
+        ARR[0] = 3;    ARR[1] = 7;    ARR[2] = 2;    ARR[3] = 6;    ARR[4] = 5;
+        ARR[5] = 4;    ARR[6] = 1;    ARR[7] = 1000; ARR[8] = 999;  ARR[9] = 25;
+        ARR[10] = 90;  ARR[11] = 100; ARR[12] = 30;  ARR[13] = 20;  ARR[14] = 10;
+        ARR[15] = 200; ARR[16] = 3300;ARR[17] = 250; ARR[18] = 12;  ARR[19] = 75;
+
+        // COUNT dizisini başlat
+        COUNT[0] = 17; COUNT[1] = 13; COUNT[2] = 18; COUNT[3] = 14; COUNT[4] = 15;
+        COUNT[5] = 16; COUNT[6] = 19; COUNT[7] = 1;  COUNT[8] = 2;  COUNT[9] = 9;
+        COUNT[10] = 6; COUNT[11] = 5; COUNT[12] = 8; COUNT[13] = 10;COUNT[14] = 12;
+        COUNT[15] = 4; COUNT[16] = 0; COUNT[17] = 3; COUNT[18] = 11;COUNT[19] = 7;
+
+        // Beklenen RESULT dizisini başlat
+        expected_RESULT[0] = 3300; expected_RESULT[1] = 1000; expected_RESULT[2] = 999; expected_RESULT[3] = 250;
+        expected_RESULT[4] = 200;  expected_RESULT[5] = 100;  expected_RESULT[6] = 90;  expected_RESULT[7] = 75;
+        expected_RESULT[8] = 30;   expected_RESULT[9] = 25;   expected_RESULT[10] = 20;  expected_RESULT[11] = 12;
+        expected_RESULT[12] = 10;  expected_RESULT[13] = 7;   expected_RESULT[14] = 6;   expected_RESULT[15] = 5;
+        expected_RESULT[16] = 4;   expected_RESULT[17] = 3;   expected_RESULT[18] = 2;   expected_RESULT[19] = 1;
+    end
+
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;  // Clock sinyali üretimi
+    end
+
+    initial begin
+        rst_n = 0;
+        #10 rst_n = 1;  // Reset sinyali 10 zaman birimi sonra de-assert edilir
+    end
+
+    // DUT (Design Under Test) modülünü instantiate et
+    // 'sort' modülünün dizileri alıp sıralama işlemini yaptığı varsayılıyor
+    sort dut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .ARR(ARR),
+        .COUNT(COUNT),
+        .RESULT(RESULT)
+    );
+
+    initial begin
+        // DUT'nin verileri işlemesi için biraz zaman bekleyin
+        #100;
+
+        // Sonuçları doğrula
+        for (i = 0; i < 20; i = i + 1) begin
+            if (RESULT[i] !== expected_RESULT[i]) begin
+                $display("Test index %d'de başarısız oldu: beklenen %d, elde edilen %d", i, expected_RESULT[i], RESULT[i]);
+                $finish;
+            end
+        end
+        $display("Tüm testler geçti!");
+        $finish;
+    end
+
+endmodule
